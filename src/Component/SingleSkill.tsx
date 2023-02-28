@@ -2,20 +2,24 @@ import React from "react";
 type Props = {
   logo: string;
   title: string;
+  percentage: number;
 };
-const SingleSkill = ({ logo, title }: Props) => {
+const SingleSkill = ({ logo, title, percentage }: Props) => {
+  console.log(percentage);
   return (
-    <div className="relative">
-      <div className="border-2 border-blue-600 w-[40%] h-[5rem] rounded-md overflow-hidden">
-        <div className="bg-gray-400 h-screen w-[45%]"></div>
+    <div className="relative ">
+      <div className="border-2 border-blue-300 h-[2rem] rounded-full overflow-hidden ">
+        <div style={{ height: "100%", width: percentage + "%" }}>
+          <div className="bg-blue-100  h-[100%] rounded-full progress"></div>
+        </div>
       </div>
-      <div className="absolute top-0 left-0 p-2 flex items-center gap-2">
+      <div className="absolute top-0 left-0 pt-[0.1rem]  flex items-center gap-2 pl-5">
         <img
           src={logo}
           alt=""
-          className="w-[4rem] aspect-square object-contain"
+          className="w-[1rem] aspect-square object-contain"
         />
-        <span className="text-xl font-bold text-gray-700">{title}</span>
+        <span className="text-lg  text-gray-600">{title}</span>
       </div>
     </div>
   );
