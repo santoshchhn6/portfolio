@@ -25,9 +25,9 @@ const Skills = () => {
     ["Git", git, 58],
   ];
   return (
-    <div>
-      <h2 className={`${style.heading}`}>Skills</h2>
-      <div className="grid grid-cols-2  max-sm:grid-cols-1 gap-2 ">
+    <div className=" bg-orange-50 flex flex-col items-center  section">
+      <h2 className={`${style.heading} `}>Skills</h2>
+      <div className=" w-[100%] h-[100%] mygrid p-3">
         {skills.map((e, i) => (
           <SingleSkill key={i} title={e[0]} logo={e[1]} percentage={e[2]} />
         ))}

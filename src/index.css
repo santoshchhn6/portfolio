@@ -14,3 +14,36 @@
     width: 100%;
   }
 }
+
+.mygrid {
+  display: grid;
+  justify-content: space-around;
+  align-content: center;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #4f46e5, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section {
+  height: 100vh;
+  padding: 0 5rem;
+}
+
+.shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (max-width: 640px) {
+  .mygrid {
+    grid-template-columns: auto;
+  }
+
+  .section {
+    height: auto;
+    padding: 0;
+  }
+}
