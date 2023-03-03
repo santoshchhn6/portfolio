@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --blue: #2563eb;
+  --indigo: #4f46e5;
+}
+
 .progress {
   animation: w 3s ease;
 }
@@ -24,19 +29,27 @@
 }
 
 .text-gradient {
-  background: linear-gradient(to right, #4f46e5, #2563eb);
+  background: linear-gradient(to right, var(--indigo), var(--blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 1s ease;
+}
+
+.text-gradient:hover {
+  background: linear-gradient(to right, var(--blue), var(--indigo));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
   padding: 0 5rem;
 }
 
 .shadow {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 @media only screen and (max-width: 640px) {
   .mygrid {
     grid-template-columns: auto;

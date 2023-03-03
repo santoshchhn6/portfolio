@@ -7,7 +7,7 @@ import Skills from "./Component/Skills";
 function App() {
   return (
     <div className="flex justify-center bg-gray-200">
-      <div className="w-full max-w-[900px] bg-white shadow">
+      <div className=" max-w-[900px] bg-white shadow">
         <Nav />
         <About />
         <Skills />

@@ -3,8 +3,8 @@ import React from "react";
 const Nav = () => {
   const btn = ["Home", "About", "Skill", "Project", "Contact"];
   return (
-    <div className=" flex justify-between align-baseline px-20 max-sm:hidden">
-      <span className=" text-blue-600 p-2 font-bold cursor-pointer hover:text-blue-500 text-2xl">
+    <div className="bg-white z-50  w-[900px] min-w-[640px] flex justify-between align-baseline px-20 max-sm:hidden border-b border-blue-600 fixed top-0  ">
+      <span className=" text-blue-600 p-2 font-bold cursor-pointer hover:text-blue-500 text-2xl text-gradient">
         SANTOSH
       </span>
       <div className="flex items-center">
