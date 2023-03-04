@@ -40,7 +40,7 @@ const Projects = () => {
     },
   ];
   return (
-    <div className=" flex flex-col items-center section">
+    <div id="project" className=" flex flex-col items-center section">
       <h2 className={`${style.heading}`}>Projects</h2>
       <div className="flex flex-col gap-20">
         {projects.map((p, i) => (

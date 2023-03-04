@@ -23,9 +23,14 @@ const Skills = () => {
     ["Mongodb", mongodb, 50],
     ["Firebase", firebase, 50],
     ["Git", git, 58],
+    ["Bash", git, 61],
+    ["Docker", git, 65],
   ];
   return (
-    <div className=" bg-gray-600 flex flex-col items-center  section">
+    <div
+      id="skill"
+      className=" bg-gray-600 flex flex-col items-center  section"
+    >
       <h2 className={`${style.heading} text-white mt-10`}>Skills</h2>
       <div className="flex-1  p-3 mb-5  flex justify-around content-center flex-wrap gap-5">
         {skills.map((e, i) => (

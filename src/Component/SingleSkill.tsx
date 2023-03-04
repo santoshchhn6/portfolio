@@ -5,7 +5,6 @@ type Props = {
   percentage: number;
 };
 const SingleSkill = ({ logo, title, percentage }: Props) => {
-  console.log(percentage);
   return (
     <div className="relative min-w-[300px]">
       <div className="bg-blue-100 border border-gray-900 h-[2rem] rounded-full overflow-hidden ">
