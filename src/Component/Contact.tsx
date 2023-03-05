@@ -15,7 +15,7 @@ const Contact = () => {
     console.log({ data });
   };
   return (
-    <div id="contact" className="border section">
+    <div id="contact" className=" section">
       <h2 className={`${style.heading} text-center`}>Contacts</h2>
       <div className=" flex flex-wrap max-sm:flex-col max-sm:items-center">
         <UserInfo />

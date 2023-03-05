@@ -1,6 +1,7 @@
 import "./App.css";
 import About from "./Component/About";
 import Contact from "./Component/Contact";
+import Footer from "./Component/Footer";
 import Nav from "./Component/Nav";
 import Projects from "./Component/Projects";
 import Skills from "./Component/Skills";
@@ -13,6 +14,7 @@ function App() {
       <Skills />
       <Projects />
       <Contact />
+      <Footer />
     </div>
   );
 }
