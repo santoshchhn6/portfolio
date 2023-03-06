@@ -3,7 +3,7 @@ import { style } from "../style";
 import noteapp from "../assets/note.png";
 import weather from "../assets/weather.png";
 import stopwatch from "../assets/stopwatch.png";
-import ecommerce from "../assets/ecommerce.jpg";
+import ecommerce from "../assets/ecommerce.png";
 import SingleProject from "./SingleProject";
 
 const Projects = () => {
@@ -14,13 +14,13 @@ const Projects = () => {
     demoUrl: string;
   }[] = [
     {
-      title: "Note App",
+      title: "Notes",
       image: noteapp,
       githubUrl: "https://github.com/santoshchhn6/Notes-Reactjs",
       demoUrl: "https://santoshchhn6.github.io/Notes-Reactjs/",
     },
     {
-      title: "Weather App",
+      title: "Weather",
       image: weather,
       githubUrl: "https://github.com/santoshchhn6/Weather-App-Reactjs/",
       demoUrl: "https://santoshchhn6.github.io/Weather-App-Reactjs/",
@@ -40,9 +40,12 @@ const Projects = () => {
     },
   ];
   return (
-    <div id="project" className=" flex flex-col items-center section">
+    <div
+      id="project"
+      className=" flex flex-col items-center section max-sm:p-3"
+    >
       <h2 className={`${style.heading}`}>Projects</h2>
-      <div className="flex flex-col gap-20">
+      <div className="grid grid-cols-2 gap-5 max-lg:grid-cols-1 max-md:justify-center">
         {projects.map((p, i) => (
           <SingleProject
             key={i}

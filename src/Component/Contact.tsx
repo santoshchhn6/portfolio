@@ -15,7 +15,7 @@ const Contact = () => {
     console.log({ data });
   };
   return (
-    <div id="contact" className=" section">
+    <div id="contact" className=" section max-sm:p-3">
       <h2 className={`${style.heading} text-center`}>Contacts</h2>
       <div className=" flex flex-wrap max-sm:flex-col max-sm:items-center">
         <UserInfo />
@@ -44,7 +44,7 @@ const UserInfo = () => {
     },
   ];
   return (
-    <div className="max-sm:w-[90%] flex-1 flex flex-col justify-center gap-5 my-5 ">
+    <div className="max-sm:w-[100%] flex-1 flex flex-col justify-center gap-5 my-5 ">
       {info.map((e) => (
         <CustomIcon title={e.title} icon={e.icon} value={e.value} />
       ))}
@@ -88,7 +88,7 @@ const SendMessage = ({ handleSendMessage }: messageProps) => {
   };
   return (
     <form
-      className=" min-w-[300px] max-sm:w-[90%] flex-1 flex flex-col  gap-4 "
+      className=" min-w-[300px] max-sm:w-[100%] flex-1 flex flex-col  gap-4 "
       onSubmit={(e) => handleSendMessage(e, inputs)}
     >
       <input
@@ -113,7 +113,7 @@ const SendMessage = ({ handleSendMessage }: messageProps) => {
         rows={5}
         onChange={(e) => handleInputs(e)}
       ></textarea>
-      <button type="submit" className={`${style.btn} m-0 w-fi`}>
+      <button type="submit" className={`${style.btn} w-[200px]`}>
         Send Message
       </button>
     </form>
