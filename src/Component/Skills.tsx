@@ -14,25 +14,23 @@ import SingleSkill from "./SingleSkill";
 const Skills = () => {
   const skills: [string, string, number][] = [
     ["HTML", html, 60],
-    ["css", css, 75],
-    ["Tailwind", tailwind, 50],
-    ["Javascript", javascript, 80],
-    ["Typescript", typescript, 63],
-    ["Reactjs", reactjs, 72],
-    ["React Native", reactjs, 55],
-    ["Mongodb", mongodb, 50],
-    ["Firebase", firebase, 50],
-    ["Git", git, 58],
-    ["Bash", git, 61],
-    ["Docker", git, 65],
+    // ["css", css, 75],
+    // ["Tailwind", tailwind, 50],
+    // ["Javascript", javascript, 80],
+    // ["Typescript", typescript, 63],
+    // ["Reactjs", reactjs, 72],
+    // ["React Native", reactjs, 55],
+    // ["Mongodb", mongodb, 50],
+    // ["Firebase", firebase, 50],
+    // ["Git", git, 58],
+    // ["Bash", git, 61],
+    // ["Docker", git, 65],
   ];
+
   return (
-    <div
-      id="skill"
-      className=" bg-gray-600 flex flex-col items-center  section"
-    >
-      <h2 className={`${style.heading} text-white mt-10`}>Skills</h2>
-      <div className="flex-1  p-3 mb-5  flex justify-around content-center flex-wrap gap-5">
+    <div id="skill" className=" flex flex-col items-center  section">
+      <h2 className={`${style.heading}  mt-10`}>Skills</h2>
+      <div className=" w-[100%] h-[100%]  mb-5  flex justify-around content-center flex-wrap gap-5">
         {skills.map((e, i) => (
           <SingleSkill key={i} title={e[0]} logo={e[1]} percentage={e[2]} />
         ))}

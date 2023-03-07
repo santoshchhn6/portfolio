@@ -1,4 +1,6 @@
 import React from "react";
+import { Cell, Pie, PieChart } from "recharts";
+
 type Props = {
   logo: string;
   title: string;
@@ -6,19 +8,45 @@ type Props = {
 };
 const SingleSkill = ({ logo, title, percentage }: Props) => {
   return (
-    <div className="relative min-w-[300px]">
-      <div className="bg-blue-100 border border-gray-900 h-[2rem] rounded-full overflow-hidden ">
-        <div style={{ height: "100%", width: percentage + "%" }}>
-          <div className="bg-white h-[100%] rounded-full progress"></div>
-        </div>
+    <div className=" bg-gray-200 rounded-xl w-[100%] flex flex-col items-center">
+      <div className="relative w-[200px] ">
+        <span className="absolute top-[43%] left-[38%] text-3xl font-bold text-gray-500">
+          {percentage}%
+        </span>
+        <PieChart width={200} height={200}>
+          <Pie
+            data={[{ percentage: 100 }]}
+            cx={100}
+            cy={100}
+            innerRadius={60}
+            outerRadius={80}
+            fill="#fff"
+            dataKey="percentage"
+            stroke="none"
+          />
+          <Pie
+            data={[{ percentage }]}
+            cx={100}
+            cy={100}
+            startAngle={20}
+            endAngle={-3.6 * percentage}
+            innerRadius={60}
+            outerRadius={80}
+            cornerRadius={20}
+            fill="#2563eb"
+            dataKey="percentage"
+            stroke="none"
+          ></Pie>
+        </PieChart>
       </div>
-      <div className="absolute top-0 left-0 pt-[0.1rem]  flex items-center gap-2 pl-5">
+
+      <div className="flex justify-center items-center  mb-3">
         <img
           src={logo}
           alt=""
           className="w-[1rem] aspect-square object-contain"
         />
-        <span className="ml-2 text-lg  text-gray-900">{title}</span>
+        <p className="ml-2 text-lg  font-bold text-gray-500">{title}</p>
       </div>
     </div>
   );

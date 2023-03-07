@@ -4,7 +4,10 @@ import { style } from "../style";
 
 const About = () => {
   return (
-    <div id='about' className=" bg-blue-50 flex flex-row items-center max-sm:flex-col max-sm:items-center  section">
+    <div
+      id="about"
+      className="  flex flex-row items-center max-sm:flex-col max-sm:items-center  section"
+    >
       <div className=" w-[60%]  max-sm:w-[95%] max-sm:flex flex-col max-sm:text-center max-sm:mt-5">
         <h2 className=" font-bold text-2xl text-gray-700 mb-3">Hello I'am</h2>
         <h1 className=" font-bold text-4xl text-blue-600 mb-10 text-gradient">
