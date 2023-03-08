@@ -45,8 +45,8 @@ const UserInfo = () => {
   ];
   return (
     <div className="max-sm:w-[100%] flex-1 flex flex-col justify-center gap-5 my-5 ">
-      {info.map((e) => (
-        <CustomIcon title={e.title} icon={e.icon} value={e.value} />
+      {info.map((e, i) => (
+        <CustomIcon key={i} title={e.title} icon={e.icon} value={e.value} />
       ))}
     </div>
   );
