@@ -45,16 +45,15 @@ const Skills = () => {
   const handleRight = () => {
     if (x < (skills.length - 1) * 400) setX((x) => x + 400);
   };
-  console.log(x);
   return (
-    <div id="skill" className=" flex flex-col items-center  section">
-      <h2 className={`${style.heading}  mt-10`}>Skills</h2>
-      <div className=" flex items-center gap-3 ">
+    <div id="skill" className=" flex flex-col items-center max-sm:p-3 section">
+      <h2 className={`${style.heading} mb-0`}>Skills</h2>
+      <div className=" flex-1 flex items-center gap-3 max-sm:gap-0 relative">
         <BsArrowLeftCircleFill
-          className={`${arrowStyle}`}
+          className={`${arrowStyle} z-10 max-sm:absolute max-sm:left-3`}
           onClick={handleLeft}
         />
-        <div className="w-[400px] overflow-hidden ">
+        <div className="w-[400px]  overflow-hidden ">
           <div
             className="flex ease-in-out duration-500"
             style={{ transform: `translateX(-${x}px)` }}
@@ -66,7 +65,7 @@ const Skills = () => {
         </div>
 
         <BsArrowRightCircleFill
-          className={`${arrowStyle}`}
+          className={`${arrowStyle} z-10 max-sm:absolute max-sm:right-3`}
           onClick={handleRight}
         />
       </div>

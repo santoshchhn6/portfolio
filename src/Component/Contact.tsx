@@ -15,7 +15,7 @@ const Contact = () => {
     console.log({ data });
   };
   return (
-    <div id="contact" className=" section max-sm:p-3">
+    <div id="contact" className=" section max-sm:p-3 ">
       <h2 className={`${style.heading} text-center`}>Contacts</h2>
       <div className=" flex flex-wrap max-sm:flex-col max-sm:items-center">
         <UserInfo />
@@ -44,7 +44,7 @@ const UserInfo = () => {
     },
   ];
   return (
-    <div className="max-sm:w-[100%] flex-1 flex flex-col justify-center gap-5 my-5 ">
+    <div className="max-sm:w-[100%] flex-1 flex flex-col justify-center gap-5 my-5  ">
       {info.map((e, i) => (
         <CustomIcon key={i} title={e.title} icon={e.icon} value={e.value} />
       ))}

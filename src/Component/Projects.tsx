@@ -42,7 +42,7 @@ const Projects = () => {
   return (
     <div
       id="project"
-      className=" flex flex-col items-center section max-sm:p-3"
+      className=" flex flex-col items-center section max-sm:p-3 "
     >
       <h2 className={`${style.heading}`}>Projects</h2>
       <div className="grid grid-cols-2 gap-5 max-lg:grid-cols-1 max-md:justify-center">

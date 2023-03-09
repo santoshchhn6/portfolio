@@ -9,7 +9,7 @@ type Props = {
 
 const SingleSkill = ({ logo, title, percentage }: Props) => {
   return (
-    <div className=" bg-gray-200 rounded-xl min-w-[400px] flex flex-col items-center">
+    <div className=" bg-gray-200 rounded-xl min-w-[400px]  flex flex-col items-center">
       <div className="relative w-[200px] ">
         <span className="absolute top-[43%] left-[38%] text-3xl font-bold text-gray-500">
           {percentage}%

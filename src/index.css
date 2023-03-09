@@ -43,6 +43,8 @@
 
 .section {
   padding: 0 5rem;
+  padding-top: 2rem;
+  min-height: 100vh;
 }
 
 .shadow {
