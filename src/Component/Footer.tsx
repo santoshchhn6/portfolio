@@ -25,7 +25,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="bg-gray-200 h-20 flex justify-center items-center gap-3 text-2xl">
+    <div className="bg-gray-200 h-20 flex justify-center items-center gap-3 text-2xl mb-[60px]">
       {footerIcons.map((e, i) => {
         const AiIcon = AntIcons[e.icon];
         return (
