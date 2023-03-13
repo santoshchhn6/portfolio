@@ -1,9 +1,9 @@
 import React from "react";
 
 const Nav = () => {
-  const btn = ["Home", "About", "Skill", "Project", "Contact"];
+  const btn = ["Home", "Skill", "Project", "Contact"];
   return (
-    <div className="bg-white z-50  w-[100%] flex justify-between align-baseline px-20 max-sm:hidden border-b border-blue-600 fixed top-0  ">
+    <div className="bg-white z-50  w-[100%] flex justify-between align-baseline px-20 max-sm:hidden  fixed top-0  ">
       <span className=" text-blue-600 p-2 font-bold cursor-pointer hover:text-blue-500 text-2xl text-gradient">
         SANTOSH
       </span>
