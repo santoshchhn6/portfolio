@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { style } from "../style";
-import { MdEmail } from "react-icons/md";
-import { AiFillPhone } from "react-icons/ai";
-import { FaMapMarkerAlt } from "react-icons/fa";
-import * as MaterialDesign from "react-icons/md";
+import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
 
 const Contact = () => {
   const handleSendMessage = (
@@ -30,23 +27,20 @@ const UserInfo = () => {
     {
       title: "Email",
       value: "santoshchhn6.com",
-      icon: "MdEmail",
     },
     {
       title: "Phone",
       value: "+91 8591267834",
-      icon: "MdPhone",
     },
     {
       title: "Address",
       value: "Mumbai, India",
-      icon: "MdLocationOn",
     },
   ];
   return (
-    <div className="max-sm:w-[100%] flex-1 flex flex-col justify-center gap-5 my-5  ">
+    <div className=" max-sm:w-[100%] flex-1 flex flex-col  gap-5 ">
       {info.map((e, i) => (
-        <CustomIcon key={i} title={e.title} icon={e.icon} value={e.value} />
+        <CustomIcon key={i} title={e.title} value={e.value} />
       ))}
     </div>
   );
@@ -54,23 +48,26 @@ const UserInfo = () => {
 
 type IconProps = {
   title: string;
-  icon: string;
   value: string;
 };
-const CustomIcon = ({ title, icon, value }: IconProps) => {
-  const MdIcon = MaterialDesign[icon];
+const CustomIcon = ({ title, value }: IconProps) => {
   return (
     <div className="flex items-center gap-2">
-      <MdIcon
-        size={60}
-        className="text-blue-600 border-r-2 border-gray-500 pr-4 mr-3"
-      />
+      <Icon type={title} />
       <div>
         <p className="font-bold text-gray-900">{title}</p>
         <p className="text-gray-800">{value}</p>
       </div>
     </div>
   );
+};
+
+const iconStyle = "text-blue-600 text-6xl border-r-2 border-gray-500 pr-4 mr-3";
+const Icon = ({ type }: { type: string }) => {
+  if (type === "Email") return <MdEmail className={iconStyle} />;
+  else if (type === "Phone") return <MdPhone className={iconStyle} />;
+  else if (type === "Address") return <MdLocationOn className={iconStyle} />;
+  else return <span>No Icons</span>;
 };
 
 type messageProps = {

@@ -13,7 +13,7 @@ const PhoneNav = () => {
   const [active, setActive] = useState("home");
 
   return (
-    <div className="sm:hidden border-t-2 bg-white z-50  w-[100%] h-[60px] flex justify-around items-center px-20  border-b border-blue-600 fixed bottom-0  ">
+    <div className="sm:hidden  bg-white z-50  w-[100%] h-[60px] flex justify-around items-center px-20  fixed bottom-0  ">
       {navBtn.map((e, i) => {
         return (
           <a
