@@ -9,9 +9,9 @@ import reactjs from "../assets/reactjs.png";
 import mongodb from "../assets/mongodb.png";
 import firebase from "../assets/firebase.png";
 import git from "../assets/git.png";
+import github from "../assets/github.png";
 import bash from "../assets/bash.png";
 import docker from "../assets/docker.png";
-import SingleSkill from "./SingleSkill";
 import {
   BsArrowRightCircleFill,
   BsArrowLeftCircleFill,
@@ -22,52 +22,47 @@ const arrowStyle =
   "text-4xl text-blue-600 ease-in-out duration-300 hover:text-blue-500 active:scale-95 cursor-pointer";
 
 const Skills = () => {
-  const skills: [string, string, number][] = [
-    ["HTML", html, 80],
-    ["css", css, 85],
-    ["Tailwind", tailwind, 75],
-    ["Javascript", javascript, 85],
-    ["Typescript", typescript, 70],
-    ["Reactjs", reactjs, 80],
-    ["React Native", reactjs, 70],
-    ["Mongodb", mongodb, 60],
-    ["Firebase", firebase, 60],
-    ["Git", git, 65],
-    ["Bash", bash, 75],
-    ["Docker", docker, 75],
+  const skills: [string, string, number, string][] = [
+    ["HTML", html, 80, "https://developer.mozilla.org/en-US/docs/Web/HTML"],
+    ["css", css, 85, "https://developer.mozilla.org/en-US/docs/Web/CSS"],
+    ["Tailwind", tailwind, 75, "https://tailwindcss.com/"],
+    [
+      "Javascript",
+      javascript,
+      85,
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    ],
+    ["Typescript", typescript, 70, "https://www.typescriptlang.org/"],
+    ["Reactjs", reactjs, 80, "https://reactjs.org/"],
+    ["React Native", reactjs, 70, "https://reactnative.dev/"],
+    ["Mongodb", mongodb, 60, "https://www.mongodb.com/"],
+    ["Firebase", firebase, 60, "https://firebase.google.com/"],
+    ["Github", github, 65, "https://github.com/"],
+    ["Git", git, 65, "https://git-scm.com/"],
+    ["Bash", bash, 75, "https://www.gnu.org/software/bash/"],
+    ["Docker", docker, 75, "https://www.docker.com/"],
   ];
 
-  const [x, setX] = useState<number>(0);
-
-  const handleLeft = () => {
-    if (x >= 400) setX((x) => x - 400);
-  };
-  const handleRight = () => {
-    if (x < (skills.length - 1) * 400) setX((x) => x + 400);
-  };
   return (
     <div id="skill" className=" flex flex-col items-center max-sm:p-3 section">
-      <h2 className={`${style.heading} mb-0`}>Skills</h2>
-      <div className=" flex-1 flex items-center gap-3 max-sm:gap-0 relative">
-        <BsArrowLeftCircleFill
-          className={`${arrowStyle} z-10 max-sm:absolute max-sm:left-3`}
-          onClick={handleLeft}
-        />
-        <div className="w-[400px]  overflow-hidden ">
-          <div
-            className="flex ease-in-out duration-500"
-            style={{ transform: `translateX(-${x}px)` }}
-          >
-            {skills.map((e, i) => (
-              <SingleSkill key={i} title={e[0]} logo={e[1]} percentage={e[2]} />
-            ))}
-          </div>
-        </div>
+      <h2 className={`${style.heading} `}>Skills</h2>
 
-        <BsArrowRightCircleFill
-          className={`${arrowStyle} z-10 max-sm:absolute max-sm:right-3`}
-          onClick={handleRight}
-        />
+      <div className=" flex-1 flex content-center justify-center flex-wrap gap-10">
+        {skills.map((e, i) => (
+          <a
+            key={i}
+            href={e[3]}
+            className="w-[120px] h-[140px] bg-gray-200 rounded-xl flex flex-col justify-center items-center  p-3 ease-in-out duration-300 hover:scale-105 cursor-pointer"
+          >
+            <img
+              key={i}
+              src={e[1]}
+              alt=""
+              className=" w-[60px] aspect-square object-contain mb-3"
+            />
+            <p className="text-center font-bold text-gray-700">{e[0]}</p>
+          </a>
+        ))}
       </div>
     </div>
   );
