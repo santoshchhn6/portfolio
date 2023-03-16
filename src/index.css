@@ -51,6 +51,50 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.slidefromleft {
+  position: relative;
+  animation: left 2s ease-in-out;
+}
+.slidefromright {
+  position: relative;
+  animation: right 2s ease-in-out;
+}
+.slidefrombottom {
+  position: relative;
+  animation: bottom 2s ease-in-out;
+}
+
+@keyframes left {
+  0% {
+    opacity: 0;
+    left: -300px;
+  }
+  100% {
+    opacity: 1;
+    left: 0px;
+  }
+}
+@keyframes right {
+  0% {
+    opacity: 0;
+    right: -300px;
+  }
+  100% {
+    opacity: 1;
+    right: 0px;
+  }
+}
+@keyframes bottom {
+  0% {
+    opacity: 0;
+    bottom: -300px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+
 @media only screen and (max-width: 640px) {
   .mygrid {
     grid-template-columns: auto;

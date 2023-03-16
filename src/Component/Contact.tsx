@@ -38,7 +38,7 @@ const UserInfo = () => {
     },
   ];
   return (
-    <div className=" max-sm:w-[100%] flex-1 flex flex-col  gap-5 ">
+    <div className=" max-sm:w-[100%] flex-1 flex flex-col  gap-5 mb-5 slidefromleft">
       {info.map((e, i) => (
         <CustomIcon key={i} title={e.title} value={e.value} />
       ))}
@@ -85,7 +85,7 @@ const SendMessage = ({ handleSendMessage }: messageProps) => {
   };
   return (
     <form
-      className=" min-w-[300px] max-sm:w-[100%] flex-1 flex flex-col  gap-4 "
+      className=" min-w-[300px] max-sm:w-[100%] flex-1 flex flex-col  gap-4 slidefromright"
       onSubmit={(e) => handleSendMessage(e, inputs)}
     >
       <input

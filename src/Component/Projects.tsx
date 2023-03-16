@@ -45,7 +45,7 @@ const Projects = () => {
       className=" flex flex-col items-center section max-sm:p-3 "
     >
       <h2 className={`${style.heading}`}>Projects</h2>
-      <div className="grid grid-cols-2 gap-5 max-lg:grid-cols-1 max-md:justify-center">
+      <div className="grid grid-cols-2 gap-5 max-lg:grid-cols-1 max-md:justify-center slidefromleft">
         {projects.map((p, i) => (
           <SingleProject
             key={i}

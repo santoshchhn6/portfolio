@@ -47,7 +47,7 @@ const Skills = () => {
     <div id="skill" className=" flex flex-col items-center max-sm:p-3 section">
       <h2 className={`${style.heading} `}>Skills</h2>
 
-      <div className=" flex-1 flex content-center justify-center flex-wrap gap-10">
+      <div className=" flex-1 flex content-center justify-center flex-wrap gap-10 slidefromright">
         {skills.map((e, i) => (
           <a
             key={i}

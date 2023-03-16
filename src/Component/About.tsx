@@ -9,7 +9,7 @@ const About = () => {
       id="about"
       className="  flex flex-row items-center max-sm:flex-col max-sm:items-center sm:h-screen  section"
     >
-      <div className=" w-[60%]  max-sm:w-[95%] max-sm:flex flex-col max-sm:text-center max-sm:mt-5">
+      <div className=" w-[60%]  max-sm:w-[95%] max-sm:flex flex-col max-sm:text-center max-sm:mt-5 slidefromleft">
         <span className=" font-bold text-2xl text-gray-600 mb-3">Hello </span>
         <span className=" font-bold text-2xl text-gray-700 mb-3">I'am</span>
         <h1 className=" font-bold text-4xl text-blue-600 mb-3 text-gradient">
@@ -31,7 +31,7 @@ const About = () => {
           </a>
         </div>
       </div>
-      <div className=" w-[40%] max-sm:w-[95%] m-3  flex justify-center">
+      <div className=" w-[40%] max-sm:w-[95%] m-3  flex justify-center slidefromright">
         <img
           src={image}
           alt=""
